@@ -1,0 +1,26 @@
+{
+  "name": "svens-portfolio",
+  "version": "1.0.0",
+  "description": "Initial portfolio for Code Temple",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sven-Moon/CT-HTML-Portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Sven Moon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sven-Moon/CT-HTML-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Sven-Moon/CT-HTML-Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
