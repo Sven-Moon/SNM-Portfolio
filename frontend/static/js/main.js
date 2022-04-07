@@ -1,6 +1,7 @@
 // import activateDropdowns from "./components/dropdown";
 
 // activateDropdowns();
+var tempShortCopy = "";
 
 class Interest {
   constructor(id, data) {
@@ -40,7 +41,20 @@ class Interest {
   }
   handleClick(e) {
     const backdrop = document.getElementById("backdrop");
-    backdrop.classList.toggle("show");
+    backdrop.classList.add("show");
+    let node = e.target;
+
+    while (!node.className.includes("interest col-6-sm")) {
+      node = node.parentNode;
+    }
+    console.log(node.classList);
+
+    if (!node.classList.value.includes("focus")) {
+      node.classList.add("focus");
+      const textNode = document.querySelector(`#${node.id} .interest__text`);
+      tempShortCopy = textNode.innerHTML;
+      textNode.innerHTML = INTERESTS[node.id].copy;
+    }
   }
 }
 
@@ -105,3 +119,21 @@ const tinkering = new Interest("tinkering", INTERESTS);
 const travel = new Interest("travel", INTERESTS);
 // const gaming = new Interest("gaming", INTERESTS);
 const focus = new Interest("focus", INTERESTS);
+
+// BACKDROP
+document.getElementById("backdrop").addEventListener("click", clearFocus);
+
+function clearBackdrop() {}
+function clearFocus() {
+  const backdrop = document.getElementById("backdrop");
+  backdrop.classList.remove("show");
+  console.log(tempShortCopy);
+
+  const focus = document.getElementsByClassName("focus")[0];
+  focus.classList.remove("focus");
+  console.log(focus);
+
+  const textNode = document.querySelector(`#${focus.id} .interest__text`);
+
+  textNode.innerHTML = tempShortCopy;
+}

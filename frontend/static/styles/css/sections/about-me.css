@@ -70,6 +70,6 @@
 }
 
 @keyframes grow {
-  from {  }
+  from { scale: 1 }
   to { scale: 1.5 }
 }
