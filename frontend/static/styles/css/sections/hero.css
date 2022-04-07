@@ -1,0 +1,40 @@
+.hero {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 60%;
+  min-height: 400px;
+
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://res.cloudinary.com/sventerprise/image/upload/v1649276256/CT-Portfolio/rome_jj1ohn.jpg');
+  background-size: cover;
+  background-position:right;
+}
+
+.hero__text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(0,0,0,0.2);
+  justify-self: flex-end;
+  /* align-self: flex-end; */
+  max-width: 15rem;
+}
+.hero__title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 4rem;
+  margin-bottom: 1rem;
+
+  color: white;
+}
+
+.hero__subtitle {
+  color: white;
+  font-weight: 500;
+}

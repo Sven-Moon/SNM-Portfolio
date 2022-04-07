@@ -4,7 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sven Moon</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="/static/styles/index.css" />
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Me</a></li>
+      </ul>
+      <div id="projects-dropdown" class="dropdown">
+        Projects
+        <div class="dropdown__menu">
+          <a href="">Project 1</a>
+          <a href="">Project 2</a>
+          <a href="">Project 3</a>
+        </div>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="hero__text">
+        <div class="hero__title">Sven Moon</div>
+        <div class="hero__subtitle">
+          Developer.<br />Traveler.<br />Hobbyist.
+        </div>
+      </div>
+    </section>
+    <section id="social-icons">
+      <a
+        href="https://github.com/Sven-Moon"
+        class="social-icon"
+        id="github"
+        style="
+          background-image: url(https://res.cloudinary.com/sventerprise/image/upload/v1649279017/socials/github-ico_ymqjuq.png);
+        "
+      >
+      </a>
+      <a
+        href="https://www.linkedin.com/in/svenmoon/"
+        class="social-icon"
+        id="linkedin"
+        style="
+          background-image: url(https://res.cloudinary.com/sventerprise/image/upload/v1649279309/socials/linkedin-ico_t4ppfs.png);
+        "
+      >
+      </a>
+    </section>
+    <section id="about-me">
+      <div class="about-me__title">About</div>
+      <div class="interest-holder wrap">
+        <div class="col-6-lg">
+          <article id="development"></article>
+          <article id="tinkering"></article>
+        </div>
+        <div class="col-6-lg">
+          <article id="travel"></article>
+          <article id="focus"></article>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact__header">Whisper Sweet Nothings to Me</div>
+      <div class="contact__form-container">
+        <div class="contact__blurb col-6-m">
+          I'm available for hire, fireside chats, and general experimentation.
+          If you'd like any of those things, you're invited to sendd me a
+          message!
+          <img
+            src="https://res.cloudinary.com/sventerprise/image/upload/v1649360523/CT-Portfolio/Ear-trumpet_hsxyxh.png"
+            alt="ear trumpet"
+          />
+        </div>
+        <form action="" class="">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="me@email.com"
+            class="email"
+          />
+          <textarea
+            rows="4"
+            cols="50"
+            name="message"
+            id="message"
+            placeholder="Message..."
+            class="message"
+          ></textarea>
+          <button type="submit" class="contact__submit success">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+    <div id="backdrop"></div>
+    <footer></footer>
+    <script type="module" src="/static/js/main.js"></script>
+  </body>
 </html>

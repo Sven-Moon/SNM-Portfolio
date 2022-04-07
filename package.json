@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server",
+    "dev-sass": "sass [frontend/static/styles/sass/index.sass:frontend/static/styles/index.css] [frontend/static/styles/sass/nav.sass:frontend/static/styles/css/nav.css]"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/Sven-Moon/CT-HTML-Portfolio#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
   }
 }

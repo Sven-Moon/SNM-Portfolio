@@ -10,7 +10,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "index.html"));
+  res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
 });
 
 app.listen(process.env.PORT || PORT, () =>

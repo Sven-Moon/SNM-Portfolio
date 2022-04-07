@@ -1,0 +1,28 @@
+:root{
+  --col-nav: rgb(168, 109, 0);
+  --col-nav-dark: rgb(118, 76, 0);
+  --col-nav-light: rgb(240, 156, 0);
+
+  --col-success: rgb(13, 84, 206);
+  --col-warning: rgb(135, 96, 43);
+  --col-danger: rgb(245, 44, 44);
+
+  --col-success-hov: rgb(9, 55, 136);
+  --col-warning-hov: rgb(97, 70, 32);
+  --col-danger-hov: rgb(166, 30, 30);
+
+  --col-success-disabled: rgb(143, 163, 197);
+  --col-warning-disabled: rgb(132, 118, 100);
+  --col-danger-disabled: rgb(241, 149, 149);
+
+  
+  /* Z-INDEX */
+  --z-base: 0;
+  --z-menu: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal-backdrop: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-tooltip: 60;
+}

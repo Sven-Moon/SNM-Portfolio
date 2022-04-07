@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}  
+body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+body * {
+  display: flex;
+}
+
+nav {
+  margin: 0;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.p-1 {
+  padding: .125;
+}
+
+.p-2 { 
+  padding: .25rem;
+}
+
+#backdrop {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: var(--z-modal-backdrop);
+}
+#backdrop.show {
+  display: block
+}
+
+/* BUTTONS */
+button {
+  border: none;
+  border-radius: 6px;
+
+  width: fit-content;
+  padding: 1rem;
+  margin: 0;
+}
+button.success {
+  background-color: var(--col-success);
+  color: white;
+  font-weight: 300;
+}
+button.warning {
+  background-color: var(--col-warning);
+  color: white;
+  font-weight: 300;
+}
+button.danger {
+  background-color: var(--col-danger);
+  color: white;
+  font-weight: 300;
+}
+button.success:hover {
+  background-color: var(--col-success-hov);
+  color: white;
+  font-weight: 500;
+}
+button.warning:hover {
+  background-color: var(--col-warning-hov);
+  color: white;
+  font-weight: 500;
+}
+button.danger:hover {
+  background-color: var(--col-danger-hov);
+  color: white;
+  font-weight: 500;
+}
+button.success:disabled {
+  background-color: var(--col-success-disabled);
+}
+button.warning:disabled {
+  background-color: var(--col-warning-disabled);
+}
+button.danger:disabled {
+  background-color: var(--col-danger-disabled);
+}
