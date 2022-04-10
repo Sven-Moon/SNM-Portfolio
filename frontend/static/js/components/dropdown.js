@@ -1,20 +1,34 @@
 export default function activateDropdowns() {
+  var DELAY = 60;
   // Listen to clicks on all drop downs
-  document
-    .querySelectorAll(".dropdown")
-    .forEach((el) => el.addEventListener("click", handleClick));
+  document.querySelectorAll(".dropdown").forEach((el) => {
+    el.addEventListener("mouseenter", translateXMenuIn);
+    el.addEventListener("mouseleave", translateXMenuOut);
+  });
 
-  function handleClick(e) {
-    // Prevent <a> links from changing the page
-    e.preventDefault();
-    const classList = e.currentTarget.classList;
+  function translateXMenuIn(e) {
+    const menu = document.querySelector(`#${e.target.id} .dropdown__menu`);
+    menu.classList.add("show");
 
-    // Check if the dropdown is currently open
-    const isOpen = classList.contains("dropdown--open");
-    if (isOpen) {
-      classList.remove("dropdown--open");
-    } else {
-      classList.add("dropdown--open");
-    }
+    const menuItems = document.querySelectorAll(`#${e.target.id} a`);
+    menuItems.forEach((item) => {
+      const delay = item.dataset.index * DELAY;
+      item.classList.add("translate-x");
+
+      // item.style = `animation: 300ms ease ${delay}ms 1 normal forwards running translateXIn`;
+      item.style.animation = `300ms ease ${delay}ms 1 normal forwards running translateXIn`;
+    });
+  }
+  function translateXMenuOut(e) {
+    const menu = document.querySelector(`#${e.target.id} .dropdown__menu`);
+    const menuItems = document.querySelectorAll(`#${e.target.id} a`);
+
+    menuItems.forEach((item) => {
+      const delay = item.dataset.index * DELAY;
+      item.style.animation = `300ms ease ${delay}ms 1 normal forwards running translateXOut`;
+    });
+    setTimeout(() => {
+      menu.classList.remove("show");
+    }, DELAY * menuItems.length + 300);
   }
 }

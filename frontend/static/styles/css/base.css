@@ -50,7 +50,7 @@ nav {
   display: block;
   opacity: 1;
 }
-.show {
+div.show {
   display: block
 }
 
