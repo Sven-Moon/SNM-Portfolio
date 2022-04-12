@@ -7,10 +7,10 @@ export class Interest {
     // this.el.className = "interest col-6-sm";
     this.createInterestNode = this.createInterestNode.bind(this);
     this.createSkillsNode = this.createSkillsNode.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    this.openModal = this.openModal.bind(this);
 
     this.interest =
-      typeof this.data == "array"
+      this.data.name == "Skills"
         ? this.createSkillsNode(id, this.data)
         : this.createInterestNode(id, this.data);
     // this.el.appendChild(interest);
@@ -18,7 +18,7 @@ export class Interest {
   createInterestNode(id, data) {
     const node = document.createElement("div");
     node.className = "interest__container";
-    node.addEventListener("click", this.handleClick);
+    node.addEventListener("click", this.openModal);
     const cardData = data;
     node.innerHTML = `    
       <div
@@ -49,10 +49,10 @@ export class Interest {
   createSkillsNode(id, data) {
     const node = document.createElement("div");
     node.className = "interest__container";
-    node.addEventListener("click", this.handleClick);
+    node.addEventListener("click", this.openModal);
     const cardData = data;
 
-    const skillContainer = createSkills(cardData);
+    const skillContainer = createSkills(cardData.data);
 
     node.innerHTML = `    
       <div
@@ -70,10 +70,7 @@ export class Interest {
     node.appendChild(skillContainer);
     return node;
   }
-  handleClick(e) {
-    this.openModal(this.data);
-  }
-  openModal(data) {
+  openModal() {
     const nodeCopy = this.getNode().cloneNode(true);
     new Modal(nodeCopy);
   }
@@ -86,8 +83,8 @@ function createSkills(cardData) {
   const skillContainer = document.createElement("div");
   skillContainer.className = "skillContainer";
 
-  console.log(cardData.data);
-  cardData.data.forEach((skillData) => {
+  console.log(cardData);
+  cardData.forEach((skillData) => {
     skillContainer.insertAdjacentHTML(
       "beforeend",
       `

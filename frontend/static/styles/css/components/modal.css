@@ -1,0 +1,30 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, .8);
+  z-index: var(--z-modal-backdrop);
+  transition: opacity 1s linear;
+
+}
+.modal__container {
+  max-width: 80%;
+  width: 80%;
+  height: fit-content;
+  max-height: 80%;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.modal .modal__show {
+  display: flex;
+}
+.modal .modal__hide {
+  display: none;
+}

@@ -12,11 +12,11 @@ export class Modal {
     node.className = "modal";
     node.addEventListener("click", this.closeModal);
 
-    node.innerHTML = ` 
-    <div class="modal__container">     
-    </div>
-    `;
-    node.appendChild(content);
+    const container = document.createElement("div");
+    container.className = "modal__container";
+    container.appendChild(content);
+
+    node.appendChild(container);
     return node;
   }
   closeModal() {
