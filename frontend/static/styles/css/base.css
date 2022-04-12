@@ -53,6 +53,9 @@ nav {
 div.show {
   display: block
 }
+div.hide {
+  display: none
+}
 
 /* BUTTONS */
 button {

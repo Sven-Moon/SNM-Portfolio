@@ -1,4 +1,4 @@
-#about-me {
+#about {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,7 @@
 
 }
 
-.about-me__title {
+.about__title {
   margin-bottom: 2rem;
   
   color: white;
@@ -18,17 +18,24 @@
   font-size: 4rem;
   font-weight: 500;
 }
+.about__subtitle {
+  font-style: italic;
+}
 
 .interest {
   padding: 1rem; 
   cursor: pointer;
 }
 
-.interest_holder {
+.interest__holder {
   padding: 1rem;
   width: 100%;
 }
-.interest__container {  
+.interest__holder > div {
+  justify-content: center;
+  align-items: center;
+}
+.interest__container, .modal__content {  
   flex-direction: column;
   
   width: 100%;
@@ -50,7 +57,8 @@
   font-weight: 500;
   overflow-wrap: break-word;
   hyphens: auto;
-
+  align-items: flex-end;
+  justify-content: flex-end;
 
   padding: 1rem;
   color: white;
@@ -62,10 +70,18 @@
   flex-shrink: 0;
   overflow: hidden;  
 }
-.interest__text {
+.interest__content {
   padding: .5rem;
   background-color: rgba(255, 255, 255, 0.2);
-  transition: height .3s;
+}
+.interest__text-modal {
+  display: none;
+}
+.modal .modal__show {
+  display: flex;
+}
+.modal .modal__hide {
+  display: none;
 }
 
 .focus {
@@ -79,6 +95,39 @@
 
 .modal .interest__text {
   width: 70vw;
+}
+
+.skillContainer {
+  padding: .25rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 3rem;
+}
+
+.skill {
+  border-radius: 6px;
+  padding: .25rem .5rem;
+  margin: .5rem;
+  background-color: white;
+  border: 1px solid rgb(69, 69, 69);
+  width: fit-content;
+  align-items: center;
+}
+
+.skill__image {
+  display: block;
+  flex-shrink: 0;  
+  margin-right: .5rem;
+  border-radius: 50%;
+  height: 1rem;
+  aspect-ratio: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.skill_name {
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 @keyframes grow {
