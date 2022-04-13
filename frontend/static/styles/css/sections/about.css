@@ -57,7 +57,7 @@
   width: 100%;
   margin-bottom: .5rem;
   /* texts */
-  font-size: 6vmin;
+  font-size: 3rem;
   font-weight: 500;
   overflow-wrap: break-word;
   hyphens: auto;
@@ -136,4 +136,16 @@
 @keyframes grow {
   from { scale: 1 }
   to { scale: 1.5 }
+}
+
+@media only screen and (min-width: 600px) {
+  .interest__header{
+    font-size: 6vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .interest__header{
+    font-size: 3vw;
+  }
 }

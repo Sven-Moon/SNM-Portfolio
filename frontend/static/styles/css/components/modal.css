@@ -14,7 +14,7 @@
 
 }
 .modal__container {
-  max-width: 80%;
+  max-width: 600px;
   width: 80%;
   height: fit-content;
   max-height: 80%;
