@@ -8,12 +8,25 @@ nav {
   z-index: var(--z-menu);
 
   width: fit-content;
-  padding-inline: 1rem;
+  padding-left: 1rem;
 
   background-color: var(--col-nav);
 }
 
+.nav__edge-angle {
+  position: absolute;
+  left: -42px;
+  top: 0;
+
+  height: 0;
+  width: 0;
+  border-right: .1rem solid transparent;
+  border-left: 25px solid transparent;
+  border-top: 37px solid var(--col-nav);
+}
+
 ul {  
+  position: relative;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
