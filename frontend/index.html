@@ -83,7 +83,7 @@
             alt="ear trumpet"
           />
         </div>
-        <form action="" class="">
+        <form action="" class="" id="contact__form">
           <input
             type="email"
             name="email"
@@ -99,9 +99,16 @@
             placeholder="Message..."
             class="message"
           ></textarea>
-          <button type="submit" class="contact__submit success">
-            Send Message
-          </button>
+          <div class="contact__action-area">
+            <div id="errors"></div>
+            <button
+              type="submit"
+              class="contact__submit success"
+              id="contact__submit"
+            >
+              Send Message
+            </button>
+          </div>
         </form>
       </div>
     </section>

@@ -48,8 +48,21 @@
   object-position: center;
 }
 
+.contact__action-area {
+  /* justify-content: space-between;   */
+  align-items: flex-start;
+  width: 100%; 
+}
+
+#errors {
+  color: tomato;
+  font-weight: 500;
+  min-width: 100px;
+  hyphens: auto;
+}
+
 .contact__submit {
-  align-self: flex-end;
+  margin-left: auto;
 }
 
 @media only screen and (min-width: 600px) {
@@ -59,8 +72,9 @@
   #contact form {
     order: 1;
   }
-.contact__form-container {
-  flex-flow: row nowrap;
-}
+  .contact__form-container {
+    flex-flow: row nowrap;
+  }
+
   
 }

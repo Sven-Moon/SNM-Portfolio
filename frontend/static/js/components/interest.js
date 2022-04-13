@@ -83,7 +83,6 @@ function createSkills(cardData) {
   const skillContainer = document.createElement("div");
   skillContainer.className = "skillContainer";
 
-  console.log(cardData);
   cardData.forEach((skillData) => {
     skillContainer.insertAdjacentHTML(
       "beforeend",
