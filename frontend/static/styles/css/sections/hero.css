@@ -2,8 +2,8 @@
   display: block;
   position: relative;
   width: 100%;
-  height: 60%;
-  min-height: 400px;
+  min-height: 500px;
+  max-height: 90%;
 
   background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://res.cloudinary.com/sventerprise/image/upload/v1649276256/CT-Portfolio/rome_jj1ohn.jpg');
   background-size: cover;
