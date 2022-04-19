@@ -1,0 +1,18 @@
+body {
+  display: grid;
+  grid-template-rows: 70vh 1fr 1fr;
+  grid-template-columns: 100%;
+  grid-template-areas: "hero" "about" "contact";
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.about {
+  grid-area: about;
+}
+
+.contact {
+  grid-area: contact;
+}
