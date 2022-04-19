@@ -1,25 +1,38 @@
 #about {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "title" "subtitle" "interests";
+  /* flex-direction: column; */
+  /* align-items: center; */
 
   padding: 2rem 1rem 1rem;  
   width: 100%;
 
   background-image: linear-gradient(to bottom right, rgba(211, 211, 211, 0.56), rgba(128, 128, 128, 0.609));
-
+}
+#about > * {
+  justify-content: center;
 }
 
 .about__title {
+  grid-area: title;
   margin-bottom: 2rem;
   
   color: white;
 
   font-size: 4rem;
   font-weight: 500;
+  /* justify-content: center; */
 }
 .about__subtitle {
+  grid-area: subtitle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-style: italic;
+}
+.about__subtitle > * {  
+  display: block;
 }
 
 .interest {
@@ -28,6 +41,9 @@
 }
 
 .interest__holder {
+  grid-area: interests;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   padding: 1rem;
   width: 100%;
 }
@@ -110,7 +126,8 @@
 .skill {
   border-radius: 6px;
   padding: .25rem .5rem;
-  margin: .5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   background-color: white;
   border: 1px solid rgb(69, 69, 69);
   width: fit-content;
@@ -133,18 +150,27 @@
   font-size: 1rem;
 }
 
-@keyframes grow {
-  from { scale: 1 }
-  to { scale: 1.5 }
-}
 
 @media only screen and (min-width: 600px) {
   .interest__header{
     font-size: 6vw;
   }
+
+.interest__holder {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+}
+
+@media only screen and (min-width: 1000px) {
+
 }
 
 @media only screen and (min-width: 1200px) {
+  .interest__holder {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   .interest__header{
     font-size: 3vw;
   }

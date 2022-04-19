@@ -56,19 +56,17 @@
     </aside>
     <section id="about">
       <div class="about__title">About</div>
-      <quote class="about__subtitle">
-        To truly know a man, one must read about him on the internet.
-      </quote>
-      <div class="about__subtitle">-Aristotle</div>
+      <div class="about__subtitle">
+        <quote
+          >To truly know a man, one must read about him on the internet.</quote
+        >
+        <div class="about__subtitle">-Aristotle</div>
+      </div>
       <div class="interest__holder wrap">
-        <div class="col-6-lg">
-          <article id="development" class="interest col-6-sm"></article>
-          <article id="skills" class="interest col-6-sm"></article>
-        </div>
-        <div class="col-6-lg">
-          <article id="travel" class="interest col-6-sm"></article>
-          <article id="tinkering" class="interest col-6-sm"></article>
-        </div>
+        <article id="development" class="interest"></article>
+        <article id="skills" class="interest"></article>
+        <article id="travel" class="interest"></article>
+        <article id="tinkering" class="interest"></article>
       </div>
     </section>
     <section id="contact">
@@ -99,16 +97,14 @@
             placeholder="Message..."
             class="message"
           ></textarea>
-          <div class="contact__action-area">
-            <div id="errors"></div>
-            <button
-              type="submit"
-              class="contact__submit success"
-              id="contact__submit"
-            >
-              Send Message
-            </button>
-          </div>
+          <div id="errors"></div>
+          <button
+            type="submit"
+            class="contact__submit success"
+            id="contact__submit"
+          >
+            Send Message
+          </button>
         </form>
       </div>
     </section>
