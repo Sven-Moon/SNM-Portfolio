@@ -1,9 +1,16 @@
 .hero {
   /* display: block; */
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: ". ." ". text";
+
+
   position: relative;
   /* width: 100%; */
   /* min-height: 500px; */
   /* max-height: 90%; */
+  padding: 2rem;
 
   background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://res.cloudinary.com/sventerprise/image/upload/v1649276256/CT-Portfolio/rome_jj1ohn.jpg');
   background-size: cover;
@@ -11,13 +18,13 @@
 }
 
 .hero__text {
-  position: absolute;
+  grid-area: text;
+  /* position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
 
-  margin-bottom: 2rem;
-  margin-right: 2rem;
-
+  /* margin-bottom: 2rem;
+  margin-right: 2rem; */
   flex-direction: column;
   padding: 2rem;
   background-color: rgba(0,0,0,0.2);
