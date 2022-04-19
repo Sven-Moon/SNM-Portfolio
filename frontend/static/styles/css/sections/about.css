@@ -38,6 +38,7 @@
 .interest {
   padding: 1rem; 
   cursor: pointer;
+  height: fit-content;
 }
 
 .interest__holder {
@@ -55,7 +56,7 @@
   flex-direction: column;
   
   width: 100%;
-  height: fit-content;
+  height: 100%;
   margin-bottom: 1rem;
   padding: 1rem;
   
@@ -63,11 +64,11 @@
   box-shadow: 1px 1px 2px rgba(128, 128, 128, .5);
 }
 .modal .interest__container {
+  flex-grow: 1;
+  min-height: 0;
+  height: 100%;
   margin: 0;
-}
-.interest__content {
-  flex-direction: column;
-  border-radius: 6px;
+  overflow-y: auto;
 }
 .interest__header {
   width: 100%;
@@ -91,36 +92,36 @@
   overflow: hidden;  
 }
 .interest__content {
-  padding: .5rem;
+  flex-direction: column;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
 }
 .interest__text-modal {
   display: none;
-  /* overflow-y: auto; */
+  min-height: 0;
+  height: 100%;
+  max-height: calc(80vh - 70vw);
+  overflow-y: auto;
 }
 
-.focus {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);  
-  z-index: var(--z-modal);
-  transition: grow .5s;
-}
-
-.modal .interest__text {
-  width: 70vw;
+.interest__text {
+  height: 1.5rem;
 }
 
 .skillContainer {
-  padding: .25rem;
+  padding-top: .5rem;
   flex-wrap: wrap;
   overflow: hidden;
-  height: 3rem;
+  height: 2.5rem;
 }
 
 .modal .skillContainer {
+  justify-content: space-around;
   height: fit-content;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .skill {
@@ -137,7 +138,6 @@
 .skill__image {
   display: block;
   flex-shrink: 0;  
-  margin-right: .5rem;
   border-radius: 50%;
   height: 1rem;
   aspect-ratio: 1;
@@ -145,9 +145,17 @@
   background-repeat: no-repeat;
 }
 
-.skill_name {
+.modal .skill__image {
+  margin-right: .5rem;
+}
+
+div.skill__name {
+  display: none;
   font-weight: 500;
   font-size: 1rem;
+}
+.modal div.skill__name {
+  display: block;
 }
 
 
@@ -156,14 +164,10 @@
     font-size: 6vw;
   }
 
-.interest__holder {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-}
-
-@media only screen and (min-width: 1000px) {
-
+  .interest__holder {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
