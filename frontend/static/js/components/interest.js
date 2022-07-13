@@ -3,8 +3,6 @@ import { Modal } from "./modal.js";
 export class Interest {
   constructor(id, data) {
     this.data = data[id];
-    // this.el = document.getElementById(id);
-    // this.el.className = "interest col-6-sm";
     this.createInterestNode = this.createInterestNode.bind(this);
     this.createSkillsNode = this.createSkillsNode.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -13,7 +11,6 @@ export class Interest {
       this.data.name == "Skills"
         ? this.createSkillsNode(id, this.data)
         : this.createInterestNode(id, this.data);
-    // this.el.appendChild(interest);
   }
   createInterestNode(id, data) {
     const node = document.createElement("div");
@@ -34,17 +31,14 @@ export class Interest {
         ${cardData.name}
       </div>
       <div class="interest__content">
-        <div class="interest__text modal__hide">${
-          cardData.data.slice(0, 25) + "..."
-        }
+        <div class="interest__text modal__hide">${cardData.data
+      }
         </div>
         <div class="interest__text-modal modal__show">${cardData.data}
         </div>
       </div>
     `;
     return node;
-
-    this.el.appendChild(node);
   }
   createSkillsNode(id, data) {
     const node = document.createElement("div");
@@ -110,12 +104,6 @@ export const INTERESTS = {
     imgUrl:
       "https://res.cloudinary.com/sventerprise/image/upload/v1649367104/CT-Portfolio/diy_zsszqy.jpg",
   },
-  // gaming: {
-  //   name: "Gaming",
-  //   data: "My mind is happiest when it's busy. It's nice to relax watching an episode of something now and again, but on the whole, I'd much rather be forming a strategy to beat my opponent into submission (often my loving wife). Board games like Settlers of Catan, Scythe, Gloomhaven, and Dominion are great for folding strategies together. Blowing up some bad guys in one of the Borderlands games or commanding thousands of troops to wipe out an opposing army is fine when I just need to blow off somme steam. Either way, relaxation tends to be fast and furious.",
-  //   imgUrl:
-  //     "https://res.cloudinary.com/sventerprise/image/upload/v1649367702/CT-Portfolio/tabletop1_ckh2sq.jpg",
-  // },
   travel: {
     name: "Travel",
     data: "It turns out that it really is worth the trip. Although my favorite travel has involved taking up temporary residence (Berlin, Istanbul), a short visit also tends to be highly satisfying and elucidating. Having seen many of Europe's monuments, I find I like speaking to inhabitants more. Understanding political and economic troubles, what constitutes as funny, and what tastes good in a region makes me feel like I know the place and it reminds me of what not to take for granted in my own locale. And it helps me discover a few recipes of various types as well.",

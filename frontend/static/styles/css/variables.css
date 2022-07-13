@@ -1,21 +1,23 @@
-:root{
-  --col-nav: rgb(168, 109, 0);
+:root {
+  --col-nav: #a86d00;
   --col-nav-dark: rgb(118, 76, 0);
   --col-nav-light: rgb(240, 156, 0);
 
-  --col-success: rgb(13, 84, 206);
+  --col-success: #22333b;
   --col-warning: rgb(135, 96, 43);
   --col-danger: rgb(245, 44, 44);
 
-  --col-success-hov: rgb(9, 55, 136);
+  --col-success-hov: #0f161a;
+  /* rich black forgra 29*/
   --col-warning-hov: rgb(97, 70, 32);
   --col-danger-hov: rgb(166, 30, 30);
 
-  --col-success-disabled: rgb(143, 163, 197);
+  --col-success-disabled: #cbd9e1;
+  /* beau blue*/
   --col-warning-disabled: rgb(132, 118, 100);
   --col-danger-disabled: rgb(241, 149, 149);
 
-  
+
   /* Z-INDEX */
   --z-base: 0;
   --z-menu: 10;

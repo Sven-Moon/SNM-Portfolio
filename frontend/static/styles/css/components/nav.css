@@ -1,21 +1,30 @@
-*:after, *:before {
+*:after,
+*:before {
   box-sizing: border-box;
 }
+
 nav {
   position: fixed;
   right: 0;
   top: 2rem;
   z-index: var(--z-menu);
 
-  width: fit-content;
+  width: 100px;
+  min-width: fit-content;
+  transition: width .3s linear;
   padding-left: 1rem;
 
   background-color: var(--col-nav);
 }
 
+nav:hover {
+  width: 115px;
+  transition: width .3s linear;
+}
+
 .nav__edge-angle {
   position: absolute;
-  left: -41px;
+  left: -25px;
   top: 0;
 
   height: 0;
@@ -25,7 +34,7 @@ nav {
   border-top: 37px solid var(--col-nav);
 }
 
-ul {  
+ul {
   position: relative;
   flex-direction: row;
   flex-wrap: wrap;
@@ -59,17 +68,22 @@ li:before {
   transform: scaleX(0);
   transition: .25s linear;
 }
-li:hover:before, li:focus:before {
+
+li:hover:before,
+li:focus:before {
   visibility: visible;
   transform: scaleX(1)
 }
 
 .dropdown {
+  width: 100%;
+  justify-content: right;
   color: white;
   padding: .5rem .75rem;
 }
+
 .dropdown::after {
-  content: "▼" ;
+  content: "▼";
   margin-left: .5rem;
   color: white;
 }

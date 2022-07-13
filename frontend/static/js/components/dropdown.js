@@ -1,10 +1,14 @@
 export default function activateDropdowns() {
   var DELAY = 60;
   // Listen to clicks on all drop downs
-  document.querySelectorAll(".dropdown").forEach((el) => {
-    el.addEventListener("mouseenter", translateXMenuIn);
-    el.addEventListener("mouseleave", translateXMenuOut);
-  });
+  // document.getElementById("nav").forEach((el) => {
+  //   el.addEventListener("mouseenter", translateXMenuIn);
+  //   el.addEventListener("mouseleave", translateXMenuOut);
+  let nav = document.getElementById("nav")
+
+  nav.addEventListener("mouseenter", translateXMenuIn);
+  nav.addEventListener("mouseleave", translateXMenuOut);
+
 
   function translateXMenuIn(e) {
     const menu = document.querySelector(`#${e.target.id} .dropdown__menu`);

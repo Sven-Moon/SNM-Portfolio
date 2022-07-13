@@ -1,118 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sven Moon</title>
-    <link rel="shortcut icon" href="#" />
-    <link rel="stylesheet" href="/static/styles/index.css" />
-  </head>
-  <body>
-    <nav>
-      <ul class="nav__links">
-        <div class="nav__edge-angle"></div>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div id="projects-dropdown" class="dropdown">
-        Projects
-        <div class="dropdown__menu">
-          <a href="" data-index="1">Angular</a>
-          <a href="" data-index="2">Data Visualization</a>
-          <a href="" data-index="3">Fancy Forms</a>
-          <a href="" data-index="4">CSS Fun</a>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sven Moon</title>
+  <link rel="shortcut icon" href="#" />
+  <link rel="stylesheet" href="/static/styles/index.css" />
+</head>
+
+<body>
+  <nav id="nav">
+    <div class="nav__edge-angle"></div>
+    <!-- <ul class="nav__links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul> -->
+    <div id="menu-dropdown" class="dropdown">
+      Menu
+      <div class="dropdown__menu">
+        <a href="#home" data-index="1">To Top</a>
+        <a href="#about" data-index="2">About Sven</a>
+        <a href="#projects" data-index="3">Projects</a>
+        <a href="#contact" data-index="4">Contact Me</a>
       </div>
-    </nav>
-    <section class="hero" id="home">
-      <div class="hero__text">
-        <div class="hero__title">Sven Moon</div>
-        <div class="hero__subtitle">
-          Developer.<br />Traveler.<br />Hobbyist.
-        </div>
+    </div>
+  </nav>
+  <section class="hero" id="home">
+    <div class="hero__text">
+      <div class="hero__title">Sven Moon</div>
+      <div class="hero__subtitle">
+        Developer.<br />Traveler.<br />Hobbyist.
       </div>
-    </section>
-    <aside id="social-icons">
-      <a
-        href="https://github.com/Sven-Moon"
-        class="social-icon"
-        id="github"
-        style="
+    </div>
+  </section>
+  <aside id="social-icons">
+    <a href="https://github.com/Sven-Moon" class="social-icon" id="github" style="
           background-image: url(https://res.cloudinary.com/sventerprise/image/upload/v1649279017/socials/github-ico_ymqjuq.png);
-        "
-      >
-      </a>
-      <a
-        href="https://www.linkedin.com/in/svenmoon/"
-        class="social-icon"
-        id="linkedin"
-        style="
+        ">
+    </a>
+    <a href="https://www.linkedin.com/in/svenmoon/" class="social-icon" id="linkedin" style="
           background-image: url(https://res.cloudinary.com/sventerprise/image/upload/v1649279309/socials/linkedin-ico_t4ppfs.png);
-        "
-      >
-      </a>
-    </aside>
-    <section id="about">
-      <div class="about__title">About</div>
-      <quote class="about__subtitle">
-        To truly know a man, one must read about him on the internet.
-      </quote>
-      <div class="about__subtitle">-Aristotle</div>
-      <div class="interest__holder wrap">
-        <div class="col-6-lg">
-          <article id="development" class="interest col-6-sm"></article>
-          <article id="skills" class="interest col-6-sm"></article>
-        </div>
-        <div class="col-6-lg">
-          <article id="travel" class="interest col-6-sm"></article>
-          <article id="tinkering" class="interest col-6-sm"></article>
-        </div>
+        ">
+    </a>
+  </aside>
+  <section id="about">
+    <div class="about__title">About</div>
+    <quote class="about__subtitle">
+      To truly know a man, one must read about him on the internet.
+    </quote>
+    <div class="about__subtitle">-Aristotle</div>
+    <div class="interest__holder wrap">
+      <div class="col-6-lg">
+        <article id="development" class="interest col-6-sm"></article>
+        <article id="skills" class="interest col-6-sm"></article>
       </div>
-    </section>
-    <section id="contact">
-      <div class="contact__header">Whisper Sweet Nothings to Me</div>
-      <div class="contact__form-container">
-        <div class="contact__blurb col-6-m">
-          I'm available for hire, fireside chats, and general experimentation.
-          If you'd like any of those things, you're invited to send me a
-          message!
-          <img
-            src="https://res.cloudinary.com/sventerprise/image/upload/v1649360523/CT-Portfolio/Ear-trumpet_hsxyxh.png"
-            alt="ear trumpet"
-          />
-        </div>
-        <form action="" class="" id="contact__form">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="me@email.com"
-            class="email"
-          />
-          <textarea
-            rows="4"
-            cols="50"
-            name="message"
-            id="message"
-            placeholder="Message..."
-            class="message"
-          ></textarea>
-          <div class="contact__action-area">
-            <div id="errors"></div>
-            <button
-              type="submit"
-              class="contact__submit success"
-              id="contact__submit"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
+      <div class="col-6-lg">
+        <article id="travel" class="interest col-6-sm"></article>
+        <article id="tinkering" class="interest col-6-sm"></article>
       </div>
-    </section>
-    <footer></footer>
-    <script type="module" src="/static/js/main.js"></script>
-  </body>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="project__header">Recent Work</div>
+    <quote class="project__subheader">
+      Judge me not by my words or beliefs, but what I put on the internet.
+    </quote>
+    <div class="project__subheader">-Old Jewish Proverb
+    </div>
+    <div class="project__box">
+
+
+      <div id="project-1" class="project col-6-sm">
+
+        <img class="project__img"
+          src="https://res.cloudinary.com/sventerprise/image/upload/c_scale,h_1125/v1657724296/CT-Portfolio/project-1_ydv2zu.png"
+          alt="">
+        <div class="project_overlay">
+          <div class="project_title">Salad, Too</div>
+          <div class="project_description">Customize a salad or sandwich and
+            assign it to yourself or a friend. Pay and order from a history of your orders.</div>
+          <div class="project_techs">Angular, NgRx, TypeScript, C#, Entity Framework</div>
+          <button class="go-to__btn success"><a href="https://salad-too.firebaseapp.com/">See It Live</a></button>
+        </div>
+
+
+
+
+      </div>
+      <div id="project-2" class="project col-6-sm">
+
+        <img class="project__img"
+          src="https://res.cloudinary.com/sventerprise/image/upload/c_lpad,h_1125,w_2000/v1657724294/CT-Portfolio/project-2_fzzxqk.png"
+          alt="">
+        <div class="project_overlay">
+          <div class="project_title">Spell Well</div>
+          <div class="project_description">This project is fun in part because it's based on Dungeons & Dragons. And
+            who, besides almost everybody, doesn't like playing D&D? This project seeks to answer the question the
+            adventurer oft contemplates, "What spell should I cast?"</div>
+          <div class="project_techs">Angular, NgRx, TypeScript, FireStore</div>
+          <button class="go-to__btn success"><a href="https://spellwell-moon.web.app/main">See It Live</a></button>
+        </div>
+
+
+
+
+      </div>
+      <div id="project-3" class="project col-6-sm">
+
+        <img class="project__img"
+          src="https://res.cloudinary.com/sventerprise/image/upload/c_lpad,h_1125,w_2000/v1657724293/CT-Portfolio/project-3_ht7dik.png"
+          alt="">
+        <div class="project_overlay">
+          <div class="project_title">SellPhone</div>
+          <div class="project_description">Find out how much your used phone is worth. Create a sale order, ready to
+            drop off or mail.</div>
+          <div class="project_techs">Angular, NgRx, TypeScript</div>
+          <button class="go-to__btn success"><a href="https://sellphone-ng.web.app/">See It Live</a></button>
+        </div>
+
+
+
+
+      </div>
+  </section>
+  <section id="contact">
+    <div class="contact__header">Whisper Sweet Nothings to Me</div>
+    <div class="contact__form-container">
+      <div class="contact__blurb col-6-m">
+        I'm available for hire, fireside chats, and general experimentation.
+        If you'd like any of those things, you're invited to send me a
+        message!
+        <img src="https://res.cloudinary.com/sventerprise/image/upload/v1649360523/CT-Portfolio/Ear-trumpet_hsxyxh.png"
+          alt="ear trumpet" />
+      </div>
+      <form action="" class="" id="contact__form">
+        <input type="email" name="email" id="email" placeholder="me@email.com" class="email" />
+        <textarea rows="4" cols="50" name="message" id="message" placeholder="Message..." class="message"></textarea>
+        <div class="contact__action-area">
+          <div id="errors"></div>
+          <button type="submit" class="contact__submit success" id="contact__submit" disabled="true">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer></footer>
+  <script type="module" src="/static/js/main.js"></script>
+</body>
+
 </html>

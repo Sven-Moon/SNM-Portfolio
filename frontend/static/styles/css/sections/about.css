@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 2rem 1rem 1rem;  
+  padding: 2rem 1rem 1rem;
   width: 100%;
 
   background-image: linear-gradient(to bottom right, rgba(211, 211, 211, 0.56), rgba(128, 128, 128, 0.609));
@@ -12,18 +12,19 @@
 
 .about__title {
   margin-bottom: 2rem;
-  
+
   color: white;
 
   font-size: 4rem;
   font-weight: 500;
 }
+
 .about__subtitle {
   font-style: italic;
 }
 
 .interest {
-  padding: 1rem; 
+  padding: 1rem;
   cursor: pointer;
 }
 
@@ -31,28 +32,33 @@
   padding: 1rem;
   width: 100%;
 }
-.interest__holder > div {
+
+.interest__holder>div {
   justify-content: center;
   align-items: center;
 }
-.interest__container {  
+
+.interest__container {
   flex-direction: column;
-  
+
   width: 100%;
   height: fit-content;
   margin-bottom: 1rem;
   padding: 1rem;
-  
+
   background-color: white;
   box-shadow: 1px 1px 2px rgba(128, 128, 128, .5);
 }
+
 .modal .interest__container {
   margin: 0;
 }
+
 .interest__content {
   flex-direction: column;
   border-radius: 6px;
 }
+
 .interest__header {
   width: 100%;
   margin-bottom: .5rem;
@@ -69,15 +75,18 @@
   /* image */
   background-size: cover;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   aspect-ratio: 1.3;
   flex-shrink: 0;
-  overflow: hidden;  
+  overflow: hidden;
 }
+
 .interest__content {
-  padding: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 .interest__text-modal {
   display: none;
   /* overflow-y: auto; */
@@ -87,9 +96,17 @@
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
   z-index: var(--z-modal);
   transition: grow .5s;
+}
+
+.interest__text {
+  display: block;
+  text-overflow: ellipsis;
+  height: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .modal .interest__text {
@@ -97,10 +114,10 @@
 }
 
 .skillContainer {
-  padding: .25rem;
+  padding-inline: .25rem;
   flex-wrap: wrap;
   overflow: hidden;
-  height: 3rem;
+  height: 40px;
 }
 
 .modal .skillContainer {
@@ -119,7 +136,7 @@
 
 .skill__image {
   display: block;
-  flex-shrink: 0;  
+  flex-shrink: 0;
   margin-right: .5rem;
   border-radius: 50%;
   height: 1rem;
@@ -134,18 +151,23 @@
 }
 
 @keyframes grow {
-  from { scale: 1 }
-  to { scale: 1.5 }
+  from {
+    scale: 1
+  }
+
+  to {
+    scale: 1.5
+  }
 }
 
 @media only screen and (min-width: 600px) {
-  .interest__header{
+  .interest__header {
     font-size: 6vw;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .interest__header{
+  .interest__header {
     font-size: 3vw;
   }
 }

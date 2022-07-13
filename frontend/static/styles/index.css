@@ -1,4 +1,3 @@
-
 @import './css/base.css';
 @import './css/variables.css';
 @import './css/layout.css';
@@ -10,4 +9,4 @@
 @import './css/sections/hero.css';
 @import './css/sections/about.css';
 @import './css/sections/contact.css';
-
+@import './css/sections/projects.css';
