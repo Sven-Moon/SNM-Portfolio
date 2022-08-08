@@ -3,6 +3,10 @@
   --col-nav-dark: rgb(118, 76, 0);
   --col-nav-light: rgb(240, 156, 0);
 
+  --col-neutral: #eae0d5;
+  --col-neutral-light: #f8f5f1;
+  --col-neutral-dark: #95754b;
+
   --col-success: #22333b;
   --col-warning: rgb(135, 96, 43);
   --col-danger: rgb(245, 44, 44);

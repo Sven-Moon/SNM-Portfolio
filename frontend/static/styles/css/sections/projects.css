@@ -12,7 +12,7 @@
   padding: 2rem 2rem 1rem;
   width: 100%;
 
-  background-image: linear-gradient(to bottom right, rgba(211, 211, 211, 0.56), rgba(128, 128, 128, 0.609));
+  background-image: linear-gradient(to bottom right, var(--col-success), var(--col-neutral-light));
 }
 
 .project__header {
@@ -87,11 +87,12 @@
 }
 
 .project_techs {
-  font-size: clamp(.6rem, .8rem, 1rem);
+  font-size: clamp(.7rem, 3vw, 1.25rem);
 }
 
 .project_description {
-  font-size: clamp(.8rem, 1rem, 1.2rem);
+  padding-inline: .5rem;
+  font-size: clamp(.8rem, 3vw, 1.25rem);
 }
 
 .go-to__btn {
@@ -110,5 +111,29 @@
 @media only screen and (min-width:600px) {
   .project {
     width: 50%;
+  }
+
+  .project_description {
+    font-size: clamp(.75rem, 1.8vw, 1rem);
+  }
+
+  .project_techs {
+    font-size: clamp(.7rem, 1.6vw, .9rem);
+  }
+}
+
+@media only screen and (min-width:768px) {
+
+  .project_description {
+    font-size: clamp(.75rem, 1.8vw, 1rem);
+    padding-inline: 10%
+  }
+}
+
+@media only screen and (min-width:1200px) {
+
+  .project_description {
+    font-size: 1.25rem;
+    padding-inline: 20%
   }
 }

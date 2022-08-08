@@ -1,9 +1,11 @@
 const emailReg = /[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+(\\.[a-z0-9-]+)*/i;
 
-export default function activateFormVal() {
+export default function initializeContact() {
   const form = document.getElementById("contact__form");
   form.addEventListener("change", validateContactForm);
+  addContactListeners()
 }
+
 
 function validateContactForm() {
   const errors = [];
@@ -12,9 +14,6 @@ function validateContactForm() {
   // EMAIL
   if (!emailReg.test(form.email.value) && form.email.value.length > 0) {
     errors.push("Email is invalid");
-  }
-  if (form.email.value === "") {
-    errors.push("");
   }
   // MESSAGE
   // just long enough for "fuck you"
@@ -35,13 +34,13 @@ function renderErrors(errors = []) {
     const errorTemplate = `
       <ul>
         ${errors
-          .map(
-            (error) =>
-              `
+        .map(
+          (error) =>
+            `
             <li>${error}</li>
           `
-          )
-          .join("")}
+        )
+        .join("")}
       </ul>
     `;
     document.getElementById("errors").innerHTML = errorTemplate;
@@ -50,3 +49,23 @@ function renderErrors(errors = []) {
     document.getElementById("errors").innerHTML = "";
   }
 }
+
+function addContactListeners() {
+  console.log('adding')
+  let sendCopy = document.getElementById("sendCopy")
+  sendCopy.addEventListener("change", updateCc)
+  document.getElementById("email").addEventListener("keyup", updateCc)
+}
+
+function updateCc() {
+  let sendCopy = document.getElementById("sendCopy")
+  let ccEmail = document.getElementById("ccEmail")
+  if (sendCopy.checked) {
+    ccEmail.value = document.getElementById("email").value
+    ccEmail.name = '_cc'
+  } else {
+    ccEmail.value = ""
+    ccEmail.name = ''
+  }
+}
+

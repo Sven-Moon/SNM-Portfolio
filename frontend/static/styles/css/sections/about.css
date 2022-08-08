@@ -6,7 +6,7 @@
   padding: 2rem 1rem 1rem;
   width: 100%;
 
-  background-image: linear-gradient(to bottom right, rgba(211, 211, 211, 0.56), rgba(128, 128, 128, 0.609));
+  background-image: linear-gradient(to bottom right, var(--col-success), var(--col-neutral-light));
 
 }
 

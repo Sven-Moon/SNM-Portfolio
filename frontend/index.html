@@ -136,10 +136,22 @@
         <img src="https://res.cloudinary.com/sventerprise/image/upload/v1649360523/CT-Portfolio/Ear-trumpet_hsxyxh.png"
           alt="ear trumpet" />
       </div>
-      <form action="" class="" id="contact__form">
-        <input type="email" name="email" id="email" placeholder="me@email.com" class="email" />
-        <textarea rows="4" cols="50" name="message" id="message" placeholder="Message..." class="message"></textarea>
+      <form action="https://formsubmit.co/7e1df9671ef2a08dbd5020a6656c2e21" method="POST" class="" id="contact__form">
+        <label for="subject" class="contact__label">Subject</label>
+        <input type="text" name="subject" class="textInput" value="Message from SvenMoon.com">
+        <label for="email" class="contact__label" required>Reply to</label>
+        <input type="email" name="email" id="email" placeholder="me@email.com" class="textInput" " />
+        <textarea rows=" 4" cols="50" name="message" id="message" placeholder="Message..." class="message"
+          name="text"></textarea>
+
+        <input type="hidden" name="_template" value="box">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_cc" id="ccEmail">
+        <input type="hidden" name="_next" value="https://svenmoon.com/">
+
         <div class="contact__action-area">
+          <input type="checkbox" name="sendCopy" id="sendCopy">Send me a copy
           <div id="errors"></div>
           <button type="submit" class="contact__submit success" id="contact__submit" disabled="true">
             Send Message
