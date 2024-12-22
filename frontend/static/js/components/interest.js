@@ -129,6 +129,16 @@ export const INTERESTS = {
           "https://res.cloudinary.com/sventerprise/image/upload/v1649789889/skills/download_y0tqut.jpg",
       },
       {
+        name: "C#",
+        imageUrl:
+          "https://res.cloudinary.com/sventerprise/image/upload/v1734882835/c-sharp-c.228x256_nwovn1.png",
+      },
+      {
+        name: "React",
+        imageUrl:
+          "https://res.cloudinary.com/sventerprise/image/upload/v1734882556/react_icon_zy3rfu.png",
+      },
+      {
         name: "Angular",
         imageUrl:
           "https://res.cloudinary.com/sventerprise/image/upload/v1649789766/skills/download_msfomv.png",
