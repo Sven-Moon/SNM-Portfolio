@@ -48,3 +48,6 @@ Thumbs.db
 bin
 obj
 ~$portfolio_layout.pptx
+
+#Firebase
+firebase-debug.log
