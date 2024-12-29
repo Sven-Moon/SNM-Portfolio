@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Sven-Moon/CT-HTML-Portfolio#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "firebase": "^11.1.0",
     "nodemon": "^2.0.15"
   }
 }
