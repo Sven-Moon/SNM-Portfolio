@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
-}  
+}
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   position: relative;
 
@@ -14,8 +16,9 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  min-width: 400px;
+  min-width: 460px;
 }
+
 body * {
   display: flex;
 }
@@ -32,7 +35,7 @@ nav {
   padding: .125;
 }
 
-.p-2 { 
+.p-2 {
   padding: .25rem;
 }
 
@@ -48,14 +51,17 @@ nav {
   opacity: 0;
   transition: opacity 1s linear;
 }
+
 .backdrop.show {
   transition: opacity 1s linear;
   display: block;
   opacity: 1;
 }
+
 div.show {
   display: block
 }
+
 div.hide {
   display: none
 }
@@ -69,42 +75,51 @@ button {
   padding: 1rem;
   margin: 0;
 }
+
 button.success {
   background-color: var(--col-success);
   color: white;
   font-weight: 300;
 }
+
 button.warning {
   background-color: var(--col-warning);
   color: white;
   font-weight: 300;
 }
+
 button.danger {
   background-color: var(--col-danger);
   color: white;
   font-weight: 300;
 }
+
 button.success:hover {
   background-color: var(--col-success-hov);
   color: white;
   font-weight: 500;
 }
+
 button.warning:hover {
   background-color: var(--col-warning-hov);
   color: white;
   font-weight: 500;
 }
+
 button.danger:hover {
   background-color: var(--col-danger-hov);
   color: white;
   font-weight: 500;
 }
+
 button.success:disabled {
   background-color: var(--col-success-disabled);
 }
+
 button.warning:disabled {
   background-color: var(--col-warning-disabled);
 }
+
 button.danger:disabled {
   background-color: var(--col-danger-disabled);
 }
