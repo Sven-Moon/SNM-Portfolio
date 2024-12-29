@@ -1,13 +1,23 @@
 .hero {
+  background-color: rgba(0, 0, 0, 0.2);
   display: block;
   position: relative;
+
   width: 100%;
+  max-width: 800px;
+
   min-height: 500px;
   max-height: 90%;
 
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://res.cloudinary.com/sventerprise/image/upload/v1649276256/CT-Portfolio/rome_jj1ohn.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://res.cloudinary.com/sventerprise/image/upload/v1649276256/CT-Portfolio/rome_jj1ohn.jpg');
   background-size: cover;
-  background-position:right;
+  background-position: right;
+}
+
+.hero__wrap {
+  background-image: linear-gradient(to top right, var(--col-success), var(--col-neutral-light));
+  justify-content: center;
+  width: 100%;
 }
 
 .hero__text {
@@ -20,11 +30,12 @@
 
   flex-direction: column;
   padding: 2rem;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   justify-self: flex-end;
   /* align-self: flex-end; */
   max-width: 15rem;
 }
+
 .hero__title {
   font-size: 4rem;
   font-weight: 800;
